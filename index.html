@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LFOR Livraison — Livraison de repas à domicile à Clermont-Ferrand</title>
+<meta name="description" content="LFOR Livraison : livraison de repas à domicile à Clermont-Ferrand, du lundi au vendredi. Appelez le 06 58 35 98 93.">
+<link rel="canonical" href="https://lefor-livraison.fr/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="LFOR Livraison — Repas livrés à domicile">
+<meta property="og:description" content="Livraison de repas à domicile à Clermont-Ferrand, du lundi au vendredi.">
+<meta property="og:url" content="https://lefor-livraison.fr/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#6d28d9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LFOR Livraison",
+  "description": "Livraison de repas à domicile à Clermont-Ferrand",
+  "url": "https://lefor-livraison.fr/",
+  "telephone": "+33658359893",
+  "areaServed": "Clermont-Ferrand",
+  "address": { "@type": "PostalAddress", "addressLocality": "Clermont-Ferrand", "addressCountry": "FR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "16:30" }
+  ]
+}
+</script>
+<style>
+:root{
+  --violet:#6d28d9; --violet-d:#4c1d95; --violet-l:#ede9fe; --lilas:#c4b5fd;
+  --ink:#1e1b2e; --muted:#5b5670; --bg:#faf9ff; --card:#ffffff; --line:#e7e3f5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Nav */
+header{position:sticky;top:0;z-index:10;background:rgba(250,249,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.logo svg{width:34px;height:34px}
+.logo span{color:var(--violet)}
+.nav-links{display:flex;gap:28px;font-weight:500;color:var(--muted);font-size:.95rem}
+.nav-links a:hover{color:var(--violet)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--violet);color:#fff;box-shadow:0 8px 24px -8px rgba(109,40,217,.6)}
+.btn-s{background:#fff;color:var(--violet);border:1.5px solid var(--lilas)}
+.nav .btn{padding:9px 18px}
+
+/* Hero */
+.hero{padding:64px 0 40px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--violet-l);color:var(--violet-d);font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.035em;font-weight:800}
+h1 em{font-style:normal;color:var(--violet)}
+.hero p{color:var(--muted);font-size:1.1rem;margin:18px 0 28px;max-width:30em}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art svg{width:100%;height:auto;display:block}
+
+/* Sections */
+section{padding:72px 0;scroll-margin-top:64px}
+.s-head{text-align:center;max-width:620px;margin:0 auto 44px}
+.s-head h2{font-size:clamp(1.7rem,3.5vw,2.3rem);letter-spacing:-.03em;line-height:1.15}
+.s-head p{color:var(--muted);margin-top:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.card .ic{width:56px;height:56px;border-radius:16px;background:var(--violet-l);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:30px;height:30px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.97rem}
+
+/* Steps */
+.steps{counter-reset:s}
+.step{position:relative;padding-top:56px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:28px;width:40px;height:40px;border-radius:50%;background:var(--violet);color:#fff;font-weight:800;display:grid;place-items:center;transform:translateY(28px)}
+.step.card{padding-top:84px}
+
+/* Zone */
+.zone{background:linear-gradient(160deg,var(--violet-d),var(--violet));color:#fff;border-radius:32px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.zone h2{font-size:clamp(1.7rem,3.5vw,2.3rem);letter-spacing:-.03em;line-height:1.15}
+.zone p{opacity:.88;margin:14px 0 22px}
+.zone .btn-s{border-color:transparent}
+.zone svg{width:100%;height:auto}
+
+/* Horaires + contact */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line)}
+.hours li:last-child{border:0}
+.hours b{font-weight:700}
+.closed{color:var(--muted)}
+.contact-big{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;color:var(--violet);letter-spacing:-.02em;display:block;margin:6px 0 18px}
+.card h3.t{font-size:1.3rem;margin-bottom:14px}
+
+/* Prestations */
+.grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.presta{display:flex;flex-direction:column}
+.presta .price{font-size:1.6rem;font-weight:800;color:var(--violet);letter-spacing:-.02em;margin:10px 0 4px}
+.presta .price small{font-size:.85rem;font-weight:600;color:var(--muted)}
+.presta ul{list-style:none;margin:12px 0 20px;color:var(--muted);font-size:.93rem}
+.presta li{padding:4px 0 4px 24px;position:relative}
+.presta li::before{content:"✓";position:absolute;left:0;color:var(--violet);font-weight:800}
+.presta .btn{margin-top:auto;justify-content:center}
+.presta.pop{border:2px solid var(--violet);position:relative}
+.presta.pop::after{content:"Le plus demandé";position:absolute;top:-13px;left:24px;background:var(--violet);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:999px}
+.note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:20px}
+
+/* Réservation */
+.resa{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.resa-info h2{font-size:clamp(1.7rem,3.5vw,2.3rem);letter-spacing:-.03em;line-height:1.15}
+.resa-info p{color:var(--muted);margin:12px 0}
+.resa-info ol{margin:18px 0 0 20px;color:var(--muted)}
+.resa-info li{margin:8px 0}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:700;font-size:.88rem;margin:14px 0 6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 4px var(--violet-l)}
+textarea{min-height:80px;resize:vertical}
+form .btn{width:100%;justify-content:center;margin-top:20px;border:0;cursor:pointer;font-family:inherit}
+.err{color:#b91c1c;font-size:.88rem;margin-top:10px;display:none}
+.ok{display:none;text-align:center;padding:20px 0}
+.ok .big{font-size:3rem}
+
+@media (max-width:860px){
+  .grid-p,.resa,form .row{grid-template-columns:1fr}
+  form .row{gap:0}
+}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* Barre d'appel mobile */
+.callbar{display:none}
+
+@media (max-width:860px){
+  .hero-grid,.zone,.info{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero{padding-top:36px}
+  .hero-art{order:-1;max-width:460px;margin:0 auto}
+  .zone{padding:32px 24px}
+  section{padding:52px 0}
+  body{padding-bottom:76px}
+  .callbar{display:flex;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:20}
+  .callbar a{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="LFOR Livraison">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#6d28d9"/><path d="M18 18h8v22h16v6H18z" fill="#fff"/><circle cx="46" cy="22" r="5" fill="#c4b5fd"/></svg>
+      LFOR <span>Livraison</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#prestations">Prestations</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#rendez-vous">Rendez-vous</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#rendez-vous" class="btn btn-p">Réserver</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">📍 Clermont-Ferrand</span>
+      <h1>Vos repas livrés <em>chez vous</em>, chauds et à l'heure.</h1>
+      <p>LFOR Livraison apporte vos repas directement à votre porte, du lundi au vendredi. Simple, rapide et fiable.</p>
+      <div class="cta">
+        <a href="#rendez-vous" class="btn btn-p">📅 Prendre rendez-vous</a>
+        <a href="tel:+33658359893" class="btn btn-s">📞 06 58 35 98 93</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Illustration : livreur en scooter devant la ville -->
+      <svg viewBox="0 0 520 420">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#f5f3ff"/></linearGradient>
+          <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+        </defs>
+        <rect x="10" y="10" width="500" height="400" rx="40" fill="url(#sky)"/>
+        <!-- puy (volcan) en fond -->
+        <path d="M60 300 L180 150 Q200 130 220 150 L340 300Z" fill="#ddd6fe"/>
+        <path d="M250 300 L360 190 Q375 176 390 190 L480 300Z" fill="#e4dcff"/>
+        <circle cx="420" cy="90" r="30" fill="#fde68a" opacity=".9"/>
+        <!-- immeubles -->
+        <g fill="#c4b5fd">
+          <rect x="40" y="230" width="60" height="90" rx="6"/>
+          <rect x="110" y="200" width="50" height="120" rx="6"/>
+          <rect x="380" y="215" width="55" height="105" rx="6"/>
+          <rect x="440" y="245" width="45" height="75" rx="6"/>
+        </g>
+        <g fill="#f5f3ff">
+          <rect x="52" y="245" width="12" height="12" rx="2"/><rect x="76" y="245" width="12" height="12" rx="2"/>
+          <rect x="52" y="270" width="12" height="12" rx="2"/><rect x="76" y="270" width="12" height="12" rx="2"/>
+          <rect x="122" y="215" width="10" height="12" rx="2"/><rect x="140" y="215" width="10" height="12" rx="2"/>
+          <rect x="122" y="240" width="10" height="12" rx="2"/><rect x="140" y="240" width="10" height="12" rx="2"/>
+          <rect x="392" y="230" width="12" height="12" rx="2"/><rect x="412" y="230" width="12" height="12" rx="2"/>
+          <rect x="392" y="255" width="12" height="12" rx="2"/><rect x="412" y="255" width="12" height="12" rx="2"/>
+        </g>
+        <!-- route -->
+        <rect x="10" y="320" width="500" height="90" fill="#4c1d95"/>
+        <path d="M10 410 H510 V370 Q510 410 470 410Z" fill="#4c1d95"/>
+        <g fill="#a78bfa"><rect x="40" y="362" width="50" height="6" rx="3"/><rect x="140" y="362" width="50" height="6" rx="3"/><rect x="340" y="362" width="50" height="6" rx="3"/><rect x="440" y="362" width="50" height="6" rx="3"/></g>
+        <!-- traits de vitesse -->
+        <g stroke="#c4b5fd" stroke-width="5" stroke-linecap="round"><line x1="70" y1="270" x2="130" y2="270"/><line x1="50" y1="295" x2="120" y2="295"/><line x1="85" y1="245" x2="125" y2="245"/></g>
+        <!-- scooter -->
+        <g transform="translate(150 200)">
+          <circle cx="40" cy="140" r="30" fill="#1e1b2e"/><circle cx="40" cy="140" r="12" fill="#e7e3f5"/>
+          <circle cx="210" cy="140" r="30" fill="#1e1b2e"/><circle cx="210" cy="140" r="12" fill="#e7e3f5"/>
+          <path d="M10 125 Q20 85 80 88 L150 88 Q170 88 178 70 L192 40 L206 40 L198 78 Q232 92 240 128 L180 128 Q150 108 110 128Z" fill="#7c3aed"/>
+          <rect x="188" y="28" width="30" height="8" rx="4" fill="#1e1b2e"/>
+          <circle cx="236" cy="96" r="7" fill="#fde68a"/>
+          <!-- sac de livraison -->
+          <rect x="10" y="20" width="78" height="70" rx="10" fill="url(#bag)"/>
+          <rect x="10" y="38" width="78" height="6" fill="#4c1d95"/>
+          <path d="M34 62 h30 M49 55 v14" stroke="#ede9fe" stroke-width="5" stroke-linecap="round"/>
+          <!-- livreur -->
+          <path d="M100 88 Q100 40 128 30 L150 30 Q170 34 172 62 L170 88Z" fill="#a78bfa"/>
+          <path d="M150 50 L190 40" stroke="#a78bfa" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="140" cy="10" r="22" fill="#f1c7a8"/>
+          <path d="M116 6 Q118 -20 142 -20 Q166 -20 165 4 Q140 -4 116 6Z" fill="#4c1d95"/>
+          <rect x="112" y="2" width="56" height="8" rx="4" fill="#6d28d9"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Un service pensé pour vous simplifier la vie</h2>
+      <p>Des livraisons sérieuses, avec le sourire.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#6d28d9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18h22a10 10 0 0 1-22 0Z"/><path d="M3 18h26"/><path d="M12 11c0-2 2-2 2-4M18 11c0-2 2-2 2-4"/></svg></div>
+        <h3>Repas à domicile</h3>
+        <p>Vos repas livrés directement à votre porte, en main propre.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#6d28d9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="17" r="11"/><path d="M16 11v6l4 3"/><path d="M12 3h8"/></svg></div>
+        <h3>Ponctualité</h3>
+        <p>Des tournées organisées pour arriver à l'heure prévue.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#6d28d9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7Z"/><path d="m11 16 4 4 7-8"/></svg></div>
+        <h3>Soin et sérieux</h3>
+        <p>Repas transportés avec soin, dans le respect de l'hygiène.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FONCTIONNEMENT -->
+<section id="fonctionnement" style="padding-top:0">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Comment ça marche ?</h2>
+      <p>Trois étapes, c'est tout.</p>
+    </div>
+    <div class="grid3 steps">
+      <div class="card step"><h3>Vous réservez</h3><p>Choisissez votre prestation, le jour et l'heure directement sur le site.</p></div>
+      <div class="card step"><h3>On confirme</h3><p>On vous recontacte rapidement pour confirmer votre rendez-vous.</p></div>
+      <div class="card step"><h3>On livre</h3><p>Votre repas arrive chez vous, prêt à être dégusté.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATIONS -->
+<section id="prestations" style="padding-top:0">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Nos prestations</h2>
+      <p>Une formule pour chaque besoin.</p>
+    </div>
+    <div class="grid-p">
+      <div class="card presta">
+        <h3>Livraison du midi</h3>
+        <div class="price">4,90 € <small>/ livraison</small></div>
+        <ul><li>Repas livré entre 11h et 12h</li><li>Remis en main propre</li><li>Sans engagement</li></ul>
+        <a href="#rendez-vous" class="btn btn-s" data-presta="Livraison du midi">Réserver</a>
+      </div>
+      <div class="card presta pop">
+        <h3>Portage seniors</h3>
+        <div class="price">22 € <small>/ semaine</small></div>
+        <ul><li>5 livraisons du lundi au vendredi</li><li>Même livreur chaque jour</li><li>Petit moment d'échange inclus</li></ul>
+        <a href="#rendez-vous" class="btn btn-p" data-presta="Portage seniors">Réserver</a>
+      </div>
+      <div class="card presta">
+        <h3>Plateaux entreprise</h3>
+        <div class="price">dès 15 € <small>/ commande</small></div>
+        <ul><li>Réunions, séminaires, équipes</li><li>Livraison à l'heure convenue</li><li>Facture pour l'entreprise</li></ul>
+        <a href="#rendez-vous" class="btn btn-s" data-presta="Plateaux entreprise">Réserver</a>
+      </div>
+      <div class="card presta">
+        <h3>Livraison express</h3>
+        <div class="price">9,90 € <small>/ livraison</small></div>
+        <ul><li>Livré en moins d'une heure</li><li>Selon disponibilité</li><li>Idéal en dépannage</li></ul>
+        <a href="#rendez-vous" class="btn btn-s" data-presta="Livraison express">Réserver</a>
+      </div>
+      <div class="card presta">
+        <h3>Courses &amp; petites commandes</h3>
+        <div class="price">7,90 € <small>/ livraison</small></div>
+        <ul><li>Retrait en boulangerie, pharmacie, magasin</li><li>Déposé à votre porte</li><li>Jusqu'à 10 kg</li></ul>
+        <a href="#rendez-vous" class="btn btn-s" data-presta="Courses et petites commandes">Réserver</a>
+      </div>
+      <div class="card presta">
+        <h3>Abonnement mensuel</h3>
+        <div class="price">79 € <small>/ mois</small></div>
+        <ul><li>Livraisons du midi tous les jours ouvrés</li><li>Créneau fixe garanti</li><li>Résiliable à tout moment</li></ul>
+        <a href="#rendez-vous" class="btn btn-s" data-presta="Abonnement mensuel">Réserver</a>
+      </div>
+    </div>
+    <p class="note">Tarifs indicatifs, à Clermont-Ferrand. Prix du repas non compris.</p>
+  </div>
+</section>
+
+<!-- RENDEZ-VOUS -->
+<section id="rendez-vous" style="padding-top:0">
+  <div class="wrap resa">
+    <div class="resa-info">
+      <span class="tag">📅 Réservation en ligne</span>
+      <h2>Prenez rendez-vous en 1 minute</h2>
+      <p>Remplissez le formulaire : votre demande nous arrive directement.</p>
+      <ol>
+        <li>Choisissez la prestation, le jour et l'heure.</li>
+        <li>Indiquez votre nom, adresse et téléphone.</li>
+        <li>Appuyez sur « Envoyer » : on vous confirme vite.</li>
+      </ol>
+      <p style="margin-top:18px">Livraisons du lundi au vendredi, 8h30–12h00 et 14h00–16h30.</p>
+    </div>
+    <div class="card">
+      <form id="resa" novalidate>
+        <label for="f-presta">Prestation</label>
+        <select id="f-presta" required>
+          <option value="">— Choisir —</option>
+          <option>Livraison du midi</option>
+          <option>Portage seniors</option>
+          <option>Plateaux entreprise</option>
+          <option>Livraison express</option>
+          <option>Courses et petites commandes</option>
+          <option>Abonnement mensuel</option>
+        </select>
+        <div class="row">
+          <div><label for="f-date">Jour</label><input type="date" id="f-date" required></div>
+          <div><label for="f-heure">Heure</label><select id="f-heure" required></select></div>
+        </div>
+        <div class="row">
+          <div><label for="f-nom">Nom</label><input id="f-nom" autocomplete="name" required></div>
+          <div><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" autocomplete="tel" required></div>
+        </div>
+        <label for="f-adr">Adresse de livraison</label>
+        <input id="f-adr" autocomplete="street-address" placeholder="N°, rue, Clermont-Ferrand" required>
+        <label for="f-msg">Précisions (facultatif)</label>
+        <textarea id="f-msg" placeholder="Code d'entrée, étage, allergies…"></textarea>
+        <button class="btn btn-p" type="submit">Envoyer ma demande</button>
+        <p class="err" id="err"></p>
+      </form>
+      <div class="ok" id="ok">
+        <div class="big">✅</div>
+        <h3>Demande prête !</h3>
+        <p style="color:var(--muted)">Votre application SMS s'est ouverte : appuyez sur Envoyer. On vous confirme très vite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONE -->
+<section id="zone" style="padding-top:0">
+  <div class="wrap">
+    <div class="zone">
+      <div>
+        <h2>On livre à Clermont-Ferrand et alentours</h2>
+        <p>Une question sur votre adresse ? Appelez-nous, on vous répond tout de suite.</p>
+        <a href="tel:+33658359893" class="btn btn-s">📞 Vérifier mon adresse</a>
+      </div>
+      <!-- Illustration : carte stylisée -->
+      <svg viewBox="0 0 400 280" aria-hidden="true">
+        <rect width="400" height="280" rx="24" fill="#ffffff" opacity=".12"/>
+        <g stroke="#ffffff" stroke-opacity=".25" stroke-width="10" fill="none" stroke-linecap="round">
+          <path d="M20 90 Q140 60 200 140 T380 170"/>
+          <path d="M120 20 Q160 140 110 260"/>
+          <path d="M260 20 Q240 120 300 260"/>
+          <path d="M20 210 Q200 190 380 60"/>
+        </g>
+        <circle cx="200" cy="140" r="90" fill="#c4b5fd" opacity=".22"/>
+        <circle cx="200" cy="140" r="55" fill="#c4b5fd" opacity=".28"/>
+        <path d="M200 92c-20 0-34 15-34 33 0 25 34 57 34 57s34-32 34-57c0-18-14-33-34-33Z" fill="#fff"/>
+        <circle cx="200" cy="125" r="12" fill="#6d28d9"/>
+        <text x="200" y="210" text-anchor="middle" fill="#fff" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="16">Clermont-Ferrand</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="s-head"><h2>Horaires &amp; contact</h2></div>
+    <div class="info">
+      <div class="card">
+        <h3 class="t">🕒 Horaires</h3>
+        <ul class="hours">
+          <li><b>Lundi – Vendredi</b><span>8h30 – 12h00</span></li>
+          <li><span></span><span>14h00 – 16h30</span></li>
+          <li class="closed"><b>Samedi – Dimanche</b><span>Fermé</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="t">📞 Nous contacter</h3>
+        <p style="color:var(--muted)">Par téléphone ou SMS :</p>
+        <a href="tel:+33658359893" class="contact-big">06 58 35 98 93</a>
+        <div class="cta">
+          <a href="tel:+33658359893" class="btn btn-p">Appeler</a>
+          <a href="sms:+33658359893" class="btn btn-s">Envoyer un SMS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> LFOR Livraison — Clermont-Ferrand</span>
+    <span>lefor-livraison.fr</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="#rendez-vous" class="btn btn-p">📅 Réserver</a>
+  <a href="tel:+33658359893" class="btn btn-s">📞 Appeler</a>
+</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  var TEL='+33658359893';
+  var f=document.getElementById('resa'), d=document.getElementById('f-date'), h=document.getElementById('f-heure'),
+      p=document.getElementById('f-presta'), err=document.getElementById('err');
+  var slots=['08:30','09:00','09:30','10:00','10:30','11:00','11:30','14:00','14:30','15:00','15:30','16:00'];
+  h.innerHTML='<option value="">— Choisir —</option>'+slots.map(function(s){return '<option>'+s.replace(':','h')+'</option>'}).join('');
+  var t=new Date(); t.setMinutes(t.getMinutes()-t.getTimezoneOffset()); d.min=t.toISOString().slice(0,10);
+  document.querySelectorAll('[data-presta]').forEach(function(a){a.addEventListener('click',function(){p.value=a.dataset.presta;})});
+  function show(m){err.textContent=m;err.style.display='block';}
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); err.style.display='none';
+    var v=function(id){return document.getElementById(id).value.trim();};
+    if(!v('f-presta')||!v('f-date')||!v('f-heure')||!v('f-nom')||!v('f-tel')||!v('f-adr')) return show('Merci de remplir tous les champs.');
+    var day=new Date(v('f-date')+'T12:00').getDay();
+    if(day===0||day===6) return show('Nous livrons uniquement du lundi au vendredi.');
+    var date=new Date(v('f-date')+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+    var msg='Demande de RDV LFOR Livraison\n'+
+      'Prestation : '+v('f-presta')+'\n'+
+      'Le '+date+' à '+v('f-heure')+'\n'+
+      'Nom : '+v('f-nom')+'\nTél : '+v('f-tel')+'\nAdresse : '+v('f-adr')+
+      (v('f-msg')?'\nPrécisions : '+v('f-msg'):'');
+    window.location.href='sms:'+TEL+'?&body='+encodeURIComponent(msg);
+    f.style.display='none'; document.getElementById('ok').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>
